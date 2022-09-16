@@ -1,8 +1,14 @@
 *{
     margin:0;
     padding: 0;
+    /* background-image: "./assets/background.gif"; */
     /* overflow: hidden; */
 }
+body {
+    background-image: url("./assets/background.gif");
+    /* background-color: #cccccc; */
+   }
+   
 #loader{
     background-color: black;
     width: 100%;

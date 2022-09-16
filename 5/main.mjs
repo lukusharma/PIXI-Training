@@ -6,7 +6,8 @@ export function createGame(div) {
     const game = new Application({
         width:innerWidth+10,
         height:innerHeight+100,
-        backgroundColor:0x2266FF,
+        // backgroundColor:0x2266FF,
+        transparent:true,
     });
     console.log('game', game);
     div.appendChild(game.view);

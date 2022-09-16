@@ -21,9 +21,10 @@ export function start(app) {
       secondChoice = cards.filter((v) => v.isOpen());
       
       console.log("fs= ",firstChoice,"sc= ", secondChoice);
-      if(secondChoice === undefined)
+      if(secondChoice[1]===undefined)
       {
-      
+        secondChoice[1]=100;
+      }
       if (secondChoice[0].id === secondChoice[1].id) {
         
         
@@ -42,7 +43,7 @@ export function start(app) {
           secondChoice = undefined;
           stage.interactiveChildren = true;
         }, 1000);
-      }} else {
+      } else {
         setTimeout(()=>{
         cards.forEach((c) => {
           c.reset();

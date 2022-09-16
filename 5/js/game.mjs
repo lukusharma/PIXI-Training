@@ -19,7 +19,14 @@ export function start(app) {
     } else {
       stage.interactiveChildren = false;
       secondChoice = cards.filter((v) => v.isOpen());
+      
+      console.log("fs= ",firstChoice,"sc= ", secondChoice);
+      if(secondChoice === undefined)
+      {
+      
       if (secondChoice[0].id === secondChoice[1].id) {
+        
+        
         setTimeout(() => {
           stage.removeChild(secondChoice[0].view);
           stage.removeChild(secondChoice[1].view);
@@ -35,7 +42,7 @@ export function start(app) {
           secondChoice = undefined;
           stage.interactiveChildren = true;
         }, 1000);
-      } else {
+      }} else {
         setTimeout(()=>{
         cards.forEach((c) => {
           c.reset();

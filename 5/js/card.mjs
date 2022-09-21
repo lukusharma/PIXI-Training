@@ -10,7 +10,7 @@ let cardFrames = [];
 let w = 148.5;
 let h = 204.5;
 for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 4; j++) {
+  for (let j = 0; j < 3; j++) {
     cardFrames.push([i * w, j * h, w, h]);
   }
 }
